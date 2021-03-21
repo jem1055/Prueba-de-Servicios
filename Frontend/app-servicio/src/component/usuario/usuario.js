@@ -1,7 +1,7 @@
 import React from "react";
 import { Table } from "react-bootstrap";
 import axios from "axios";
-import Navegador from "../navegador/navegador";
+import NavegadorSesion from "./NavegadorSesion/NavegadorSesion";
 
 class Usuario extends React.Component {
   constructor() {
@@ -24,7 +24,7 @@ class Usuario extends React.Component {
   render() {
     return (
       <div>
-        <Navegador></Navegador>
+        <NavegadorSesion></NavegadorSesion>
         <div className="container   mt-5">
           <h1>Usuario</h1>
           <div className="row">

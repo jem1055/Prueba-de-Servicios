@@ -1,7 +1,7 @@
 import React from "react";
 import { Table, Form, Card, Button } from "react-bootstrap";
 import axios from "axios";
-import Navegador from "../navegador/navegador";
+import NavegadorSesion from "./NavegadorSesion/NavegadorSesion";
 
 class Administrador extends React.Component {
   constructor() {
@@ -114,7 +114,7 @@ class Administrador extends React.Component {
   render() {
     return (
       <div>
-        <Navegador></Navegador>
+        <NavegadorSesion></NavegadorSesion>
         <div className="container  mt-5">
           <h1>Administrador</h1>
           <div className="row">
