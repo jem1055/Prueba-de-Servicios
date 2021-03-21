@@ -1,12 +1,12 @@
 import React from "react";
 import { Navbar, Button, Nav, Form } from "react-bootstrap";
 
-class Navegador extends React.Component {
-  inicioSesion = () => {
-    window.location.href = "/iniciosesion";
+class NavegadorAdmin extends React.Component {
+  home = () => {
+    window.location.href = "/";
   };
 
-  home = () => {
+  cerrarSesion = () => {
     window.location.href = "/";
   };
 
@@ -25,11 +25,11 @@ class Navegador extends React.Component {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto"></Nav>
             <Form inline>
-              <Button
-                onClick={this.inicioSesion}
-                variant="outline-primary mx-1"
-              >
-                Incio Sesión
+              <Button onClick={this.registro} variant="outline-primary mx-1">
+                Registrarse Usuario
+              </Button>
+              <Button onClick={this.cerrarSesion} variant="outline-danger">
+                Cerrar sesion
               </Button>
             </Form>
           </Navbar.Collapse>
@@ -39,4 +39,4 @@ class Navegador extends React.Component {
   }
 }
 
-export default Navegador;
+export default NavegadorAdmin;

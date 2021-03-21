@@ -1,7 +1,6 @@
 import React from "react";
 import "./home.css";
 import Navegador from "../navegador/navegador";
-import { Button } from "react-bootstrap";
 
 class Home extends React.Component {
   render() {
@@ -22,9 +21,7 @@ class Home extends React.Component {
           <div class="my-5">
             <h2>Somos los mejores en prestasion de servicios de salud</h2>
           </div>
-          <div class="contenido-hero  d-flex justify-content-center">
-            <Button clasName="btn btn.primary "> Empezar</Button>
-          </div>
+          <div class="contenido-hero  d-flex justify-content-center"></div>
         </section>
       </div>
     );

@@ -24,22 +24,34 @@ class Registro extends React.Component {
       contrasenia: this.state.contrasenia,
       rol: this.state.rol,
     };
-    const url = "http://localhost:4000/api/usuario";
 
-    await fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    })
-      .then((response) => response.json())
-      .then((responseJson) => {
-        console.log(responseJson);
+    if (
+      !this.state.nombre ||
+      !this.state.apellido ||
+      !this.state.correo ||
+      !this.state.contrasenia ||
+      !this.state.rol
+    ) {
+      alert("Faltan Datos por Registrar");
+    } else {
+      const url = "http://localhost:4000/api/usuario";
+
+      await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
       })
-      .catch((error) => {
-        console.log(error);
-      });
+        .then((response) => response.json())
+        .then((responseJson) => {
+          console.log(responseJson);
+          window.location.href = "inicioSesion";
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }
   };
 
   render() {
@@ -112,7 +124,7 @@ class Registro extends React.Component {
                       variant="primary"
                       type="submit"
                     >
-                      Ingresar
+                      Registrar
                     </Button>
                   </Form>
                 </Card.Body>
